@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpRecyclerView() {
         Landscape  landscapeList = new Landscape();
+        Log.d("MainActivity", "   Test de log");
 
         RecyclerAdapter adapter = new RecyclerAdapter(this, landscapeList.getData());
 

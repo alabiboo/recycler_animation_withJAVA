@@ -1,6 +1,7 @@
 package com.pluralsight.animation_challenge_2;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ public class RecyclerAdapter extends  RecyclerView.Adapter<RecyclerAdapter.MyVie
         this.mContext = mContext;
         this.mLandscapes = mLandscapes;
         mLayoutInflater = LayoutInflater.from(this.mContext);
+        Log.d("RecyclerAdapter", "   Test de log");
     }
 
     @NonNull
@@ -81,10 +83,12 @@ public class RecyclerAdapter extends  RecyclerView.Adapter<RecyclerAdapter.MyVie
 
         }
 
-
+// 11-07 14:02:52.909 13868-13868/? E/RecyclerView: No adapter attached; skipping layout
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            Log.d("RecyclerMyViewHolder", "   Test de log");
             title = (TextView)itemView.findViewById(R.id.tvTitle);
             imgThumb = (ImageView)itemView.findViewById(R.id.img_row);
             imgDelete = (ImageView)itemView.findViewById(R.id.img_row_delete);
